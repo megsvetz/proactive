@@ -1,0 +1,2 @@
+class Flexibility < Exercise
+end

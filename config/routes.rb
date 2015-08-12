@@ -1,9 +1,30 @@
 Rails.application.routes.draw do
+
+  resources :goals
+
+  resources :endurances, controller: 'exercises', type: 'Endurance'
+  resources :strengths, controller: 'exercises', type: 'Strength'
+  resources :flexibilities, controller: 'exercises', type: 'Flexibility'
+  resources :balance, controller: 'exercises', type: 'Balance'
+
+  get 'client_information/index'
+
+  get 'client_information/new'
+
+  get 'client_information/create'
+
+  get 'client_information/edit'
+
+  get 'client_information/update'
+
+  get 'home/index'
+
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

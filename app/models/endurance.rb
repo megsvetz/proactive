@@ -1,0 +1,2 @@
+class Endurance < Exercise
+end
