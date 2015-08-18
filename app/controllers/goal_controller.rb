@@ -40,7 +40,7 @@ class GoalController < ApplicationController
 
   def authenticate_user
     if @goal.user_id != current_user.id
-      redirect_to index_path
+      redirect_to root_path
     end
   end
 
